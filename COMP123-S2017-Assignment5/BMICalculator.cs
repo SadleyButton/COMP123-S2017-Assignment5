@@ -24,5 +24,10 @@ namespace COMP123_S2017_Assignment5
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
