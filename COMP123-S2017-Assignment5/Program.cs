@@ -7,10 +7,11 @@ using System.Windows.Forms;
 
 /* Name: Bradley Sutton
  * Date: August 03, 2017
+ * Date: August 08, 2017
  * Student Number: 300280496
  * GitHub: https://github.com/SadleyButton/COMP123-S2017/Assignment5
- * Description - This is the Driver Class for the BMI Calculator Windows Form Application - COMP123 Assignment 5
- * Version 0.1
+ * Description - Added the SplashScreen and set to run by default
+ * Version 0.2
  */
 
 namespace COMP123_S2017_Assignment5
@@ -25,7 +26,7 @@ namespace COMP123_S2017_Assignment5
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BMICalculator());
+            Application.Run(new SplashScreen());
         }
     }
 }
