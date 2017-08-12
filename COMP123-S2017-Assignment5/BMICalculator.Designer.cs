@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.BMITableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.WeightUnitLabel = new System.Windows.Forms.Label();
             this.ObeseLabel = new System.Windows.Forms.Label();
             this.OverWeightLabel = new System.Windows.Forms.Label();
             this.NormalWeightLabel = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.CalculateButton = new System.Windows.Forms.Button();
             this.UnderweightLabel = new System.Windows.Forms.Label();
             this.HeightUnitLabel = new System.Windows.Forms.Label();
-            this.WeightUnitLabel = new System.Windows.Forms.Label();
             this.BMITableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,6 +89,16 @@
             this.BMITableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.BMITableLayoutPanel.Size = new System.Drawing.Size(300, 440);
             this.BMITableLayoutPanel.TabIndex = 0;
+            // 
+            // WeightUnitLabel
+            // 
+            this.WeightUnitLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.WeightUnitLabel.AutoSize = true;
+            this.WeightUnitLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WeightUnitLabel.Location = new System.Drawing.Point(225, 165);
+            this.WeightUnitLabel.Name = "WeightUnitLabel";
+            this.WeightUnitLabel.Size = new System.Drawing.Size(0, 24);
+            this.WeightUnitLabel.TabIndex = 17;
             // 
             // ObeseLabel
             // 
@@ -277,16 +287,6 @@
             this.HeightUnitLabel.Size = new System.Drawing.Size(0, 24);
             this.HeightUnitLabel.TabIndex = 16;
             // 
-            // WeightUnitLabel
-            // 
-            this.WeightUnitLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.WeightUnitLabel.AutoSize = true;
-            this.WeightUnitLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WeightUnitLabel.Location = new System.Drawing.Point(225, 165);
-            this.WeightUnitLabel.Name = "WeightUnitLabel";
-            this.WeightUnitLabel.Size = new System.Drawing.Size(0, 24);
-            this.WeightUnitLabel.TabIndex = 17;
-            // 
             // BMICalculator
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -299,6 +299,7 @@
             this.Name = "BMICalculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BMI Calculator";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BMICalculator_FormClosing);
             this.BMITableLayoutPanel.ResumeLayout(false);
             this.BMITableLayoutPanel.PerformLayout();
             this.ResumeLayout(false);

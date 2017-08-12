@@ -10,19 +10,23 @@ using System.Windows.Forms;
 
 /* Name: Bradley Sutton
  * Created: August 03, 2017
- * Date: August 08, 2017
+ * Date: August 11, 2017
  * Student Number: 300280496
  * GitHub: https://github.com/SadleyButton/COMP123-S2017/Assignment5
  * Description - This is the splash screen for Assignment 5 - BMI Calculator
- *             - Created with timer (timeout 3 seconds)
- *             - Hide Splashscreen and display BMICalculator after timer
- * Version 0.1
+ * Version 0.2 - Refactored adding properties for instantiation
  */
 
 namespace COMP123_S2017_Assignment5
 {
     public partial class SplashScreen : Form
     {
+        //PROPERTIES
+        public BMICalculator CalculateBMI
+        {
+            get { return Program.calculateBMI; }
+        }
+
         public SplashScreen()
         {
             InitializeComponent();
@@ -30,14 +34,9 @@ namespace COMP123_S2017_Assignment5
 
         private void SplashScreenTimer_Tick(object sender, EventArgs e)
         {
-            if (SplashScreenTimer.Enabled == true)
-            {
-                this.Hide();
-                BMICalculator calulateBMI = new BMICalculator();
-                calulateBMI.Show();
-                SplashScreenTimer.Enabled = false;
-            }
-
+            this.CalculateBMI.Show();
+            SplashScreenTimer.Enabled = false;
+            this.Hide();
         }
     }
 }

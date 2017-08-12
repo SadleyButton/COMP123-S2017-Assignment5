@@ -108,5 +108,15 @@ namespace COMP123_S2017_Assignment5
             }
             else ImperialRadioButton.ForeColor = Color.Black;
         }
+
+        /// <summary>
+        /// This is the event handler for the "FormClosing" event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BMICalculator_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
